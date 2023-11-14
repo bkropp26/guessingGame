@@ -1,5 +1,6 @@
 def main():
-    for range in 3:
+    list = [1, 2, 3]
+    for range in list:
         guess = player_guess()
         give_feedback(26, guess)
 
