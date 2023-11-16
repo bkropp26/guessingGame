@@ -1,25 +1,29 @@
 import random
 def main():
     playagain()
-
+    randomnumber()
 def playagain():
-    randNumb = random.randint(1,99)
+    secretnumber = randomnumber()
     list = [1, 2, 3]
     for range in list:
         guess = player_guess()
-        give_feedback(randNumb, guess)
-    print("The number was " + str(randNumb))
+        give_feedback(secretnumber, guess)
+    print("The number was " + str(secretnumber))
     restart()
 
 def player_guess():
     return input("Guess a number 1-100: ")
 
-def give_feedback(number, guess):
-    if (int(guess) > int(number)):
+
+def randomnumber():
+    return(random.randint(1,99))
+
+def give_feedback(randomnumber, guess):
+    if (int(guess) > int(randomnumber)):
         print("Lower!")
-    if (int(guess) < int(number)):
+    if (int(guess) < int(randomnumber)):
         print("Higher!")
-    if (int(guess) == int(number)):
+    if (int(guess) == int(randomnumber)):
         print("You Win!")
         if (input("Would you like to play again? ") == "yes"):
             print("play again")

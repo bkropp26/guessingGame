@@ -5,8 +5,7 @@ def main():
 
 
 def randomnumber():
-    random.randint(1,99)
-    return()
+    return(random.randint(1,99))
 
 
 
